@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AESTHETIX | Minimalist Fashion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafafa;
+            color: #1a1a1a;
+        }
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+        /* スムーズなスクロール用 */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* スクロールバー非表示（iOSライク） */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="max-w-md mx-auto shadow-2xl min-h-screen bg-white">
+
+    <!-- ナビゲーション -->
+    <nav class="fixed top-0 w-full max-w-md z-50 glass-nav border-b border-gray-100">
+        <div class="px-6 py-4 flex justify-between items-center">
+            <button class="p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+            </button>
+            <h1 class="serif text-2xl font-bold tracking-tighter uppercase">Aesthetix</h1>
+            <div class="flex gap-4">
+                <button class="p-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                </button>
+                <button class="p-1 relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span class="absolute top-0 right-0 bg-black text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">2</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+        <!-- ヒーローセクション -->
+        <section class="relative h-[80vh] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=1000" 
+                 alt="Hero Collection" 
+                 class="w-full h-full object-cover"
+                 onerror="this.src='https://via.placeholder.com/1000x1500?text=Fashion+Collection'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-8 pb-16">
+                <p class="text-white/80 uppercase tracking-[0.2em] text-xs mb-2">New Season 2024</p>
+                <h2 class="serif text-5xl text-white mb-6 leading-tight italic">Elegance in<br>Simplicity</h2>
+                <button class="bg-white text-black py-4 px-8 text-sm font-semibold tracking-widest uppercase hover:bg-gray-100 transition-colors w-fit">
+                    Explore Now
+                </button>
+            </div>
+        </section>
+
+        <!-- カテゴリーナビ -->
+        <section class="py-12 px-6">
+            <h3 class="serif text-2xl mb-6">Collections</h3>
+            <div class="flex gap-4 overflow-x-auto pb-4 -mx-6 px-6 no-scrollbar">
+                <div class="flex-shrink-0 w-40">
+                    <div class="aspect-[3/4] bg-gray-100 mb-2 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover" alt="Women">
+                    </div>
+                    <p class="text-sm font-medium">Women</p>
+                </div>
+                <div class="flex-shrink-0 w-40">
+                    <div class="aspect-[3/4] bg-gray-100 mb-2 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover" alt="Men">
+                    </div>
+                    <p class="text-sm font-medium">Men</p>
+                </div>
+                <div class="flex-shrink-0 w-40">
+                    <div class="aspect-[3/4] bg-gray-100 mb-2 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover" alt="Accessories">
+                    </div>
+                    <p class="text-sm font-medium">Essentials</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- トレンド商品 -->
+        <section class="bg-gray-50 py-16 px-6">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-1">Featured</p>
+                    <h3 class="serif text-3xl">Must Haves</h3>
+                </div>
+                <button class="text-sm border-b border-black pb-1">View All</button>
+            </div>
+
+            <div class="grid grid-cols-2 gap-x-4 gap-y-10">
+                <!-- 商品 1 -->
+                <div class="group">
+                    <div class="relative aspect-[4/5] overflow-hidden bg-gray-200 mb-3">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Wool Coat">
+                        <button class="absolute bottom-2 right-2 bg-white/90 p-2 rounded-full shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+                        </button>
+                    </div>
+                    <h4 class="text-xs text-gray-500 mb-1 uppercase tracking-tighter">Outerwear</h4>
+                    <p class="text-sm font-medium mb-1 leading-snug">Minimalist Wool Coat</p>
+                    <p class="text-sm text-gray-900 font-semibold">¥34,000</p>
+                </div>
+
+                <!-- 商品 2 -->
+                <div class="group">
+                    <div class="relative aspect-[4/5] overflow-hidden bg-gray-200 mb-3">
+                        <img src="https://images.unsplash.com/photo-1551028711-0305df2a9bc3?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Leather Jacket">
+                        <button class="absolute bottom-2 right-2 bg-white/90 p-2 rounded-full shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+                        </button>
+                    </div>
+                    <h4 class="text-xs text-gray-500 mb-1 uppercase tracking-tighter">Jackets</h4>
+                    <p class="text-sm font-medium mb-1 leading-snug">Classic Biker Leather</p>
+                    <p class="text-sm text-gray-900 font-semibold">¥48,500</p>
+                </div>
+
+                <!-- 商品 3 -->
+                <div class="group">
+                    <div class="relative aspect-[4/5] overflow-hidden bg-gray-200 mb-3">
+                        <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Cotton Shirt">
+                        <button class="absolute bottom-2 right-2 bg-white/90 p-2 rounded-full shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+                        </button>
+                    </div>
+                    <h4 class="text-xs text-gray-500 mb-1 uppercase tracking-tighter">Shirts</h4>
+                    <p class="text-sm font-medium mb-1 leading-snug">Oxford Cotton Shirt</p>
+                    <p class="text-sm text-gray-900 font-semibold">¥12,000</p>
+                </div>
+
+                <!-- 商品 4 -->
+                <div class="group">
+                    <div class="relative aspect-[4/5] overflow-hidden bg-gray-200 mb-3">
+                        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Denim">
+                        <button class="absolute bottom-2 right-2 bg-white/90 p-2 rounded-full shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+                        </button>
+                    </div>
+                    <h4 class="text-xs text-gray-500 mb-1 uppercase tracking-tighter">Bottoms</h4>
+                    <p class="text-sm font-medium mb-1 leading-snug">Relaxed Fit Denim</p>
+                    <p class="text-sm text-gray-900 font-semibold">¥18,000</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- バナー -->
+        <section class="py-20 px-8 text-center bg-black text-white">
+            <h3 class="serif text-4xl mb-4 italic">Sustainability</h3>
+            <p class="text-xs text-gray-400 leading-relaxed max-w-xs mx-auto mb-8 uppercase tracking-widest">
+                Our commitment to the planet is at the core of everything we do. Crafting timeless pieces that last a lifetime.
+            </p>
+            <button class="border border-white py-3 px-10 text-xs tracking-widest uppercase hover:bg-white hover:text-black transition-all">
+                Learn More
+            </button>
+        </section>
+
+        <!-- ニューズレター -->
+        <section class="py-20 px-8 bg-white border-b border-gray-100">
+            <div class="text-center">
+                <h3 class="serif text-2xl mb-4 leading-snug">Stay updated with<br>our new releases</h3>
+                <p class="text-sm text-gray-500 mb-8">Join the community for exclusive early access.</p>
+                <form class="flex flex-col gap-4">
+                    <input type="email" placeholder="Email Address" class="border-b border-gray-300 py-3 text-sm focus:outline-none focus:border-black transition-colors">
+                    <button type="button" class="bg-black text-white py-4 text-xs tracking-widest uppercase">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-white px-8 pt-16 pb-12">
+        <div class="grid grid-cols-2 gap-10 mb-16">
+            <div>
+                <h5 class="text-[10px] uppercase tracking-widest text-gray-400 mb-4 font-semibold">Shop</h5>
+                <ul class="text-sm space-y-2">
+                    <li>New Arrivals</li>
+                    <li>Bestsellers</li>
+                    <li>Sale</li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-[10px] uppercase tracking-widest text-gray-400 mb-4 font-semibold">Support</h5>
+                <ul class="text-sm space-y-2">
+                    <li>Shipping</li>
+                    <li>Returns</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="flex justify-between items-center border-t border-gray-100 pt-8">
+            <p class="text-[10px] text-gray-400 uppercase tracking-widest">© 2024 AESTHETIX STUDIOS</p>
+            <div class="flex gap-4">
+                <span class="text-[10px] uppercase font-bold tracking-widest">IG</span>
+                <span class="text-[10px] uppercase font-bold tracking-widest">TW</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- タブバー（モバイル用固定ナビ） -->
+    <div class="fixed bottom-0 w-full max-w-md bg-white border-t border-gray-100 px-8 py-4 flex justify-between items-center z-50">
+        <button class="flex flex-col items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+        </button>
+        <button class="flex flex-col items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </button>
+        <button class="flex flex-col items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 7.78-7.78z"></path></svg>
+        </button>
+        <button class="flex flex-col items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+        </button>
+    </div>
+
+</body>
+</html>
